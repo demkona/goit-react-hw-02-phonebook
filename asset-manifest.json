@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/demkona/goit-react-hw-02-phonebook.git/static/css/main.349b4c43.css",
-    "main.js": "/demkona/goit-react-hw-02-phonebook.git/static/js/main.d99c83e8.js",
+    "main.css": "/demkona/goit-react-hw-02-phonebook.git/static/css/main.212d75b8.css",
+    "main.js": "/demkona/goit-react-hw-02-phonebook.git/static/js/main.68e92ce2.js",
     "index.html": "/demkona/goit-react-hw-02-phonebook.git/index.html",
-    "main.349b4c43.css.map": "/demkona/goit-react-hw-02-phonebook.git/static/css/main.349b4c43.css.map",
-    "main.d99c83e8.js.map": "/demkona/goit-react-hw-02-phonebook.git/static/js/main.d99c83e8.js.map"
+    "main.212d75b8.css.map": "/demkona/goit-react-hw-02-phonebook.git/static/css/main.212d75b8.css.map",
+    "main.68e92ce2.js.map": "/demkona/goit-react-hw-02-phonebook.git/static/js/main.68e92ce2.js.map"
   },
   "entrypoints": [
-    "static/css/main.349b4c43.css",
-    "static/js/main.d99c83e8.js"
+    "static/css/main.212d75b8.css",
+    "static/js/main.68e92ce2.js"
   ]
 }
