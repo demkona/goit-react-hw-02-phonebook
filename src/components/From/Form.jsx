@@ -5,8 +5,7 @@ import css from "../From/Form.module.css"
 
 export class Form extends Component {
     static propTypes = {
-        contacts: PropTypes.array.isRequired,
-        onSubmit: PropTypes.func.isRequired,
+        onSubmit: PropTypes.func,
     };
 
     state = {
@@ -14,31 +13,16 @@ export class Form extends Component {
         number: '',
     };
 
+    inputNameId = nanoid();
+    inputTelId = nanoid();
 
     handleChange = (e) => {
         const { name, value } = e.currentTarget;
-        this.setState({
-            id: nanoid(),
-            [name]: value
-        });
-    };
-
-    findByName = contactName => {
-        return this.props.contacts.some(({ name }) => name === contactName);
+        this.setState({ [name]: value });
     };
 
     handleSubmit = e => {
         e.preventDefault();
-
-        const { name } = this.state;
-
-        if (this.findByName(name) || name !== name.toLowerCase()) {
-            alert(`${name} is already in contacts!`);
-            return;
-
-        }
-
-
         this.props.onSubmit(this.state);
         this.reset();
     };
@@ -53,6 +37,7 @@ export class Form extends Component {
                 <label>
                     Name
                     <input
+                        id={this.inputNameId}
                         type="text"
                         name="name"
                         pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
@@ -65,6 +50,7 @@ export class Form extends Component {
                 <label>
                     Number
                     <input
+                        id={this.inputTelId}
                         type="tel"
                         name="number"
                         pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
